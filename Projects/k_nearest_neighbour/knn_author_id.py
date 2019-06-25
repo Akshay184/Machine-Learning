@@ -38,7 +38,7 @@ features_train, features_test, labels_train, labels_test = preprocess()
 t0 = time()
 
 # creating k-nearest-neighbour classifier
-clf = KNeighborsClassifier(weights="distance",n_neighbors=1)
+clf = KNeighborsClassifier(weights="distance",n_neighbors=1,algorithm="brute")
 
 # training the classifier
 clf.fit(features_train, labels_train)
