@@ -64,4 +64,3 @@ def preprocess(words_file = "../tools/word_data_unix.pkl", authors_file="../tool
     print("no. of Sara training emails:", len(labels_train)-sum(labels_train))
     
     return features_train_transformed, features_test_transformed, labels_train, labels_test
-g
