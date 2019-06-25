@@ -52,7 +52,7 @@ t0 = time()
 # predicting the ouput 
 pred = clf.predict(features_test)
 
-#time taken by classisier for prediction
+#time taken by classisier for the prediction
 print("Prediction time is:",round(time()-t0),"s") 
 
 
