@@ -12,8 +12,23 @@ def outlierCleaner(predictions, ages, net_worths):
     """
     
     cleaned_data = []
+    
+    data = []
 
-    ### your code goes here
+    for i in range(len(ages)):
+        error = (net_worths[i][0]-predictions[i][0]) ** 2
+        data.append((ages[i][0], net_worths[i][0], error))
+
+       
+
+    for i in range(0, len(data), 1):
+        for j in range(0, len(data)-1, 1):
+            if data[j][2] > data[j+1][2]:
+                temp = data[j]
+                data[j] = data[j+1]
+                data[j+1] = temp
+
+    cleaned_data = data[:int(len(data)*0.9)]
 
     
     return cleaned_data
