@@ -35,7 +35,6 @@ train_color = "b"
 test_color = "r"
 
 
-
 ### Your regression goes here!
 ### Please name it reg, so that the plotting code below picks it up and 
 ### plots it correctly. Don't forget to change the test_color above from "b" to
@@ -46,6 +45,7 @@ from sklearn.linear_model import LinearRegression
 
 # creating a regression model
 reg = LinearRegression()
+
 
 # fiting the data
 reg.fit(feature_train, target_train)
@@ -88,4 +88,5 @@ plt.show()
 print("Slope of new regression line:",reg.coef_)
 print("Intercept of new regression line:",reg.intercept_)
 print("Score of this regression:",reg.score(feature_test, target_test))
+
 
